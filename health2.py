@@ -19,12 +19,13 @@ def entry():
         param_h = int(input('Enter 1 for Diet , 2 for exercise: '))
 
         if param_h == 1:
-            with open('Harry_Diet.txt', 'r+') as harry_D:
-                flag = False
-                for line in harry_D:
-                    if date in line:
-                        flag = True
-                        break
+            with open('Harry_Diet.txt','a') as harry_D:
+                with open('Harry_Diet.txt') as harry_rd:
+                    flag = False
+                    for line in harry_rd:
+                        if date in line:
+                            flag = True
+                            break   
                 if not flag:
                     harry_D.write((date + '\n'))
                 harry_D.write(time + '    ')
@@ -33,12 +34,13 @@ def entry():
                 print("Entered Successfully")
 
         if param_h == 2:
-            with open('Harry_Exercise.txt', 'r+') as harry_ex:
-                flag = False
-                for line in harry_ex:
-                    if date in line:
-                        flag = True
-                        break
+            with open('Harry_Exercise.txt','a') as harry_ex:
+                with open('Harry_Exercise.txt') as harry_rex:
+                    flag = False
+                    for line in harry_rex:
+                        if date in line:
+                            flag = True
+                            break
                 if not flag:
                     harry_ex.write((date + '\n'))
                 harry_ex.write(time + '    ')
@@ -51,12 +53,13 @@ def entry():
         param_r = int(input('Enter 1 for Diet , 2 for exercise: '))
 
         if param_r == 1:
-            with open('Rohan_Diet.txt', 'r+') as rohan_D:
-                flag = False
-                for line in rohan_D:
-                    if date in line:
-                        flag = True
-                        break
+            with open('Rohan_Diet.txt','a') as rohan_D:
+                with open('Rohan_Diet.txt', 'r+') as rohan_rd:
+                    flag = False
+                    for line in rohan_rd:
+                        if date in line:
+                            flag = True
+                            break
                 if not flag:
                     rohan_D.write((date + '\n'))
                 rohan_D.write(time + '    ')
@@ -65,12 +68,13 @@ def entry():
                 print("Entered Successfully")
 
         if param_r == 2:
-            with open('Rohan_Exercise.txt', 'r+') as rohan_ex:
-                flag = False
-                for line in rohan_ex:
-                    if date in line:
-                        flag = True
-                        break
+            with open('Rohan_Exercise.txt','a') as rohan_ex:
+                with open('Rohan_Exercise.txt') as rohan_rex:
+                    flag = False
+                    for line in rohan_rex:
+                        if date in line:
+                            flag = True
+                            break
                 if not flag:
                     rohan_ex.write((date + '\n'))
                 rohan_ex.write(time + '    ')
@@ -83,12 +87,13 @@ def entry():
         param_hm = int(input('Enter 1 for Diet , 2 for exercise: '))
 
         if param_hm == 1:
-            flag = False
-            with open('Hammad_Diet.txt', 'r+') as hammad_D:
-                for line in hammad_D:
-                    if date in line:
-                        flag = True
-                        break
+            with open('Hammad_Diet.txt', 'a') as hammad_D:
+                with open('Hammad_Diet.txt') as hammad_rd:
+                    flag = False
+                    for line in hammad_rd:
+                        if date in line:
+                            flag = True
+                            break
                 if not flag:
                     hammad_D.write((date + '\n'))
                 hammad_D.write(time + ' ')
@@ -97,12 +102,13 @@ def entry():
                 print("Entered Successfully")
 
         if param_hm == 2:
-            with open('Hammad_Exercise.txt', 'r+') as hammad_ex:
-                flag = False
-                for line in hammad_ex:
-                    if date in line:
-                        flag = True
-                        break
+            with open('Hammad_Exercise.txt', 'a') as hammad_ex:
+                with open('Hammad_Exercise.txt') as hammad_rex:
+                    flag = False
+                    for line in hammad_rex:
+                        if date in line:
+                            flag = True
+                            break
                 if not flag:
                     hammad_ex.write((date + '\n'))
                 hammad_ex.write(time + '    ')
@@ -149,10 +155,13 @@ def perform():
         entry()
     elif op == 2:
         retrieve()
+    repeat = input('\nWant to add/retrieve more: Y/N  : ')
+    if repeat == 'Y':
+        perform()
+    else:
+        pass
+
 
 
 perform()
 
-repeat = input('\nWant to add/retrieve more: Y/N  : ')
-if repeat == 'Y':
-    perform()
