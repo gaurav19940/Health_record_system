@@ -1,4 +1,4 @@
-# Health_manage
+# Health_management_system
 # About 
 This is a simple log and retirieve system for files with datetime stamp.\
 In response to simple exercise from "code with harry" - Health Management system\
