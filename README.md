@@ -1,13 +1,19 @@
 # Health_manage
-From local\
-It contains 2 files of code with simple exercise from code with harry - Health Management system\
-To create a program to write and retrieve content from files like "diet.txt and exercise.txt" for 3 persons \
-**It adds content like diet -- 'food eaten by a person at a particular time and date' in his diet file with date and time stamp** 
+# About 
+This is a simple log and retirieve system for files with datetime stamp.\
+In response to simple exercise from "code with harry" - Health Management system\
+It creates diet.txt and exercise.txt for 3 persons and maintain their diet and exercise records.\
+It takes the diet or exercises done by user at a particular time as input as a string and logs it under that date and time, which could be looked upon anytime in future using retireve feature.\
+On execution -\
+![health_manage](https://user-images.githubusercontent.com/70307677/135393119-ec9c3dc3-856f-4a72-bcf2-8b9482a2a3f5.PNG)
 
-Two files are -
-1) Health_management_system is main file i.e. last updated with short code
-2) health2  is just a simpler copy with (same code repeating) due to lack of few functions \
-Few files made during execution on my local pc have been put under ignore , **to be ignored** \
-**only health_management_system is file for use**\
-now trying to get it more general for any number of files 
+# Technical 
+Using datetime module for feeding current datetime and limiting precision upto minutes.\
+Using functions for improving repeatition of code.
+
+It can further be modified according to need, changing the data to be logged, adding more number of files and many more .
+
+** may update more general form of it
+
+
  
