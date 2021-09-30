@@ -1,8 +1,6 @@
-# to make 6  files with name-3 , diet and exercise plan
-# file - names - factors
-# input in them string differently
-# then func for reading
+# 6 files to be managed to log data with datetime stamp and to retrieve it.
 
+# Using datetime module keeping precision upto minutes 
 from datetime import datetime
 d_stamp = datetime.now()
 date = str(d_stamp.date())
@@ -10,6 +8,7 @@ time = str(d_stamp.time().replace(microsecond=0, second=0))
 
 print('This is management of diet and exercise of 3 persons , You can add and retrieve from these files  \n\n')
 
+# 
 def diet(a = 'Harry_Diet.txt',b = 'harry_D'):
     with open(a,'a') as b:
         with open(a, 'r+') as s:
